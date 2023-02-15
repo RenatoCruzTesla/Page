@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: dev
-      url: 'google.com'
+      url: 'www.cec.com.br'
     needs: build
     steps:
       - name: Run a one-line script
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: hmg
-      url: 'google.com'
+      url: 'www.cec.com.br'
     needs: deploy-dev
     steps:
       - name: Run a one-line script
@@ -32,8 +32,8 @@ jobs:
   deploy-prod:
     runs-on: ubuntu-latest
     environment:
-      name: prodd
-      url: 'google.com'
+      name: prod
+      url: 'www.cec.com.br'
     needs: deploy-hmg
     steps:
       - name: Run a one-line script
