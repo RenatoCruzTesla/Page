@@ -19,22 +19,22 @@ jobs:
       - name: Run a one-line script
         run: echo Deploy dev
         
-  deploy-hmg:
+  deploy-homolog:
     runs-on: ubuntu-latest
     environment:
-      name: hmg
+      name: homolog
       url: 'https://www.cec.com.br'
     needs: deploy-dev
     steps:
       - name: Run a one-line script
-        run: echo Deploy hmg
+        run: echo Deploy homolog
   
   deploy-prod:
     runs-on: ubuntu-latest
     environment:
       name: prod
       url: 'https://www.cec.com.br'
-    needs: deploy-hmg
+    needs: deploy-homolog
     steps:
       - name: Run a one-line script
         run: echo Deploy prod
